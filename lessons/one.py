@@ -1,9 +1,10 @@
+class NotAListException(Exception):
+    pass
+
 def inna_func(args: list):
-    for i in args:
-        if not isinstance(args, list):
-            return Exception('not a list')
-        else:
-            return len(args) % 2 == 0
+    if not isinstance(args, list):
+        return NotAListException('not a list')
+    return len(args) % 2 == 0
 
 #def lera_func(a: list[int]):
 #    for x in a:
