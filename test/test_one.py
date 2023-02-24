@@ -41,17 +41,3 @@ def test_raises_exception(arg):
         inna_func(arg)
     except Exception as e:
         assert isinstance(e, NotAListException)
-
-
-
-#@pytest.mark.parametrize(
-#    "array",
-#   [
-#        ([]),
-#        ([1, 2, 3]),
-#        (['a', 'b']),
-#        ([[], []]),
-##)
-#def test_prime(array):
-#    result = lera_func(array)
-#    assert result is True
