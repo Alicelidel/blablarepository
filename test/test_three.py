@@ -2,27 +2,25 @@ from lessons.three import inna_func_add_sum_to_the_middle, NotAStringException
 import pytest
 
 @pytest.mark.parametrize(
-    "array",
+    "string, result",
     [
-        ("a2"),
-        ("abcdEFG12345dgjfklgdfgjdfgjdfgdfgljdfgkjdfgldfjgljdfgkldfjgkjkdfgkjljkdjkfgj78"),
-        ("")
+        ("a2", "a22"),
+        ("abcd", "ab4cd"),
+        ("", "0")
     ]
 )
-def test_returns_true(array):
-    result = inna_func_add_sum_to_the_middle(array)
-    assert result is True
+def test_returns_sum(string, result):
+    assert inna_func_add_sum_to_the_middle(string) == result
 
 @pytest.mark.parametrize(
-    "array",
+    "string",
     [
         ("a1B"),
         ("abcdEFG12345dgjfklgdfgjdfgjdfgdfgljdfgkjdfgldfjgljdfgkldfjgkjkdfgkjljkdjkfg77")
     ]
 )
-def test_returns_false(array):
-    result = inna_func_add_sum_to_the_middle(array)
-    assert result is False
+def test_returns_false(string):
+    assert inna_func_add_sum_to_the_middle(string) is False
 
 @pytest.mark.parametrize(
     "arg",
