@@ -1,5 +1,5 @@
 import pytest
-from lessons.two import lera_func_find_letters_a
+from lessons.two import lera_func_find_letters_a, NotAListException
 
 
 @pytest.mark.parametrize(
@@ -19,11 +19,23 @@ def test_true(array):
         ([]),
         (['b', 'c']),
         ([1, 2, 3]),
-        (['abc']),
-        ([], [])
+        (['abc'])
     ]
 )
 def test_false(array):
     result = lera_func_find_letters_a(array)
     assert result is False
 
+@pytest.mark.parametrize(
+    "array",
+    [
+        (1),
+        ('b', 'c'),
+        ([], [])
+    ]
+)
+def test_exeption(array):
+    try:
+        lera_func_find_letters_a(array)
+    except Exception as e:
+        assert isinstance(e, NotAListException)
