@@ -1,9 +1,4 @@
-class NotAStringException(Exception):
-    pass
-
-
-class EmptyStringException(Exception):
-    pass
+from lessons.Exceptions import NotAStringException, EmptyStringException
 
 
 def lera_function_count_letters_a(args):

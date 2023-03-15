@@ -1,5 +1,5 @@
-class NotAListException(Exception):
-    pass
+from lessons.Exceptions import NotAListException
+
 
 def inna_func(args: list):
     if not isinstance(args, list):

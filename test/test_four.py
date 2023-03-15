@@ -1,4 +1,5 @@
-from lessons.four import lera_function_count_letters_a, NotAStringException, EmptyStringException
+from lessons.four import lera_function_count_letters_a
+from lessons.Exceptions import NotAStringException, EmptyStringException
 import pytest
 
 @pytest.mark.parametrize(
