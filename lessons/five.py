@@ -21,6 +21,6 @@ def inna_func_most_repeated_letter(args):
             else:
                 letters[i] = 1 #otherwise, add the letter to the dic with a count of 1
         else:
-            return False
+            return False #False if string does not contain letters
 
     return max(letters.values())
