@@ -1,4 +1,5 @@
-from lessons.one import inna_func, NotAListException
+from lessons.one import inna_func
+from lessons.Exceptions import NotAListException
 import pytest
 
 

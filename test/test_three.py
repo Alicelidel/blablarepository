@@ -1,4 +1,5 @@
-from lessons.three import inna_func_add_sum_to_the_middle, NotAStringException
+from lessons.three import inna_func_add_sum_to_the_middle
+from lessons.Exceptions import NotAStringException
 import pytest
 
 @pytest.mark.parametrize(

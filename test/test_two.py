@@ -1,5 +1,6 @@
 import pytest
-from lessons.two import lera_func_find_letters_a, NotAListException
+from lessons.two import lera_func_find_letters_a
+from lessons.Exceptions import NotAListException
 
 
 @pytest.mark.parametrize(
@@ -34,7 +35,7 @@ def test_false(array):
         ([], [])
     ]
 )
-def test_exeption(array):
+def test_exception(array):
     try:
         lera_func_find_letters_a(array)
     except Exception as e:
