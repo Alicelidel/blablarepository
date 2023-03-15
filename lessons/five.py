@@ -16,8 +16,8 @@ def inna_func_most_repeated_letter(args):
 
     for i in args:
         if i.isalpha():
-            if i in letters:
-                letters[i] = letters.get(i) + 1 #if such a letter is already in the dict, it increments its count
+            if i in letters.keys():
+                letters[i] += 1 #if such a letter is already in the dict, it increments its count
             else:
                 letters[i] = 1 #otherwise, add the letter to the dic with a count of 1
         else:
