@@ -1,4 +1,4 @@
-from lessons.one import inna_func
+from lessons.is_list_even import is_list_even
 from lessons.Exceptions import NotAListException
 import pytest
 
@@ -12,7 +12,7 @@ import pytest
      ]
 )
 def test_returns_true(array):
-    result = inna_func(array)
+    result = is_list_even(array)
     assert result is True
 
 @pytest.mark.parametrize(
@@ -23,7 +23,7 @@ def test_returns_true(array):
     ]
 )
 def test_returns_false(array):
-    result = inna_func(array)
+    result = is_list_even(array)
     assert result is False
 
 @pytest.mark.parametrize(
@@ -39,6 +39,6 @@ def test_returns_false(array):
 )
 def test_raises_exception(arg):
     try:
-        inna_func(arg)
+        is_list_even(arg)
     except Exception as e:
         assert isinstance(e, NotAListException)
