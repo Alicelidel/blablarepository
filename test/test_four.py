@@ -1,9 +1,11 @@
-from lessons.four import lera_function_count_letters_a, NotAStringException, EmptyStringException
+from lessons.count_character_occurrences import count_character_occurrences as lera_function_count_letters_a
+from lessons.Exceptions import NotAStringException, EmptyStringException
 import pytest
 
 @pytest.mark.parametrize(
     "string, result",
     [
+        ("bbbb", 0),
         ("a2", 1),
         ("abAcad", 2)
     ]
@@ -23,7 +25,7 @@ def test_returns_result_sum(string, result):
         ()
     ]
 )
-def test_exception(arg):
+def test_not_a_string_exception(arg):
     try:
         lera_function_count_letters_a(arg)
     except Exception as e:

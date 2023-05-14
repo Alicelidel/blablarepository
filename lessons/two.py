@@ -1,5 +1,5 @@
 # на вход массив, нужно вывести True если там есть буква A, большая или маленькая)
-from lessons.one import NotAListException
+from lessons.Exceptions import NotAListException
 
 
 def lera_func_find_letters_a(args: list):
