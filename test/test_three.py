@@ -1,6 +1,7 @@
-from lessons.three import inna_func_add_sum_to_the_middle
+from lessons.add_sum_to_the_middle import inna_func_add_sum_to_the_middle
 from lessons.Exceptions import NotAStringException
 import pytest
+
 
 @pytest.mark.parametrize(
     "string, result",
@@ -13,6 +14,7 @@ import pytest
 def test_returns_sum(string, result):
     assert inna_func_add_sum_to_the_middle(string) == result
 
+
 @pytest.mark.parametrize(
     "string",
     [
@@ -22,6 +24,7 @@ def test_returns_sum(string, result):
 )
 def test_returns_false(string):
     assert inna_func_add_sum_to_the_middle(string) is False
+
 
 @pytest.mark.parametrize(
     "arg",

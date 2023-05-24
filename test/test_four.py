@@ -2,6 +2,7 @@ from lessons.count_character_occurrences import count_character_occurrences as l
 from lessons.Exceptions import NotAStringException, EmptyStringException
 import pytest
 
+
 @pytest.mark.parametrize(
     "string, result",
     [
@@ -12,6 +13,7 @@ import pytest
 )
 def test_returns_result_sum(string, result):
     assert lera_function_count_letters_a(string) == result
+
 
 @pytest.mark.parametrize(
     "arg",
@@ -30,6 +32,7 @@ def test_not_a_string_exception(arg):
         lera_function_count_letters_a(arg)
     except Exception as e:
         assert isinstance(e, NotAStringException)
+
 
 @pytest.mark.parametrize(
     "arg",
