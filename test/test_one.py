@@ -15,6 +15,7 @@ def test_returns_true(array):
     result = is_list_even(array)
     assert result is True
 
+
 @pytest.mark.parametrize(
     "array",
     [
@@ -25,6 +26,7 @@ def test_returns_true(array):
 def test_returns_false(array):
     result = is_list_even(array)
     assert result is False
+
 
 @pytest.mark.parametrize(
     "arg",

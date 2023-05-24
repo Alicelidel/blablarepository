@@ -1,5 +1,6 @@
-from lessons.five import inna_func_most_repeated_letter, NotAStringException, EmptyStringException
+from lessons.most_repeated_letter import inna_func_most_repeated_letter, NotAStringException, EmptyStringException
 import pytest
+
 
 @pytest.mark.parametrize(
     "string, result",
@@ -12,6 +13,7 @@ import pytest
 def test_returns_number_of_most_repeated_letter(string, result):
     assert inna_func_most_repeated_letter(string) == result
 
+
 @pytest.mark.parametrize(
     "string",
     [
@@ -21,6 +23,7 @@ def test_returns_number_of_most_repeated_letter(string, result):
 )
 def test_returns_false(string):
     assert inna_func_most_repeated_letter(string) is False
+
 
 @pytest.mark.parametrize(
     "arg",
@@ -38,6 +41,7 @@ def test_raises_exception(arg):
         inna_func_most_repeated_letter(arg)
     except Exception as e:
         assert isinstance(e, NotAStringException)
+
 
 @pytest.mark.parametrize(
     "arg",

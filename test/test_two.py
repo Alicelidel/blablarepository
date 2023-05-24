@@ -1,5 +1,5 @@
 import pytest
-from lessons.two import lera_func_find_letters_a
+from lessons.find_letters_a import lera_func_find_letters_a
 from lessons.Exceptions import NotAListException
 
 
@@ -14,6 +14,7 @@ def test_true(array):
     result = lera_func_find_letters_a(array)
     assert result is True
 
+
 @pytest.mark.parametrize(
     "array",
     [
@@ -26,6 +27,7 @@ def test_true(array):
 def test_false(array):
     result = lera_func_find_letters_a(array)
     assert result is False
+
 
 @pytest.mark.parametrize(
     "array",
